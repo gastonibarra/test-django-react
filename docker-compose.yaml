@@ -29,3 +29,13 @@ services:
 
     ports:
       - 3000:3000
+
+  test-CICD:
+    container_name: nginx
+    image: nginx
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+
+    ports:
+      - 80:80
